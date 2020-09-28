@@ -5,8 +5,9 @@ Terraform modules which creates AWS IAM roles for use with the [Compute Software
 ## Usage 
 
 ```hcl
-module "roles" {
-  source = "../.."
+module "computesoftware-roles" {
+  source  = "ComputeSoftware/computesoftware-roles/aws"
+  version = "1.0.0"
   platform_role_external_id = "<< paste external ID here >>"
 }
 ```
