@@ -24,7 +24,8 @@ No input.
 
 ## Outputs
 
-| Name               | Description                                              |
-|--------------------|----------------------------------------------------------|
-| platform_role_arn  | The IAM Role ARN for the Compute Software Platform Role. |
-| discovery_role_arn | The IAM Role ARN for the Discovery Role.                 |
+| Name                      	| Description                                              	|
+|---------------------------	|----------------------------------------------------------	|
+| platform_role_arn         	| The IAM Role ARN for the Compute Software Platform Role. 	|
+| platform_role_external_id 	| The External ID provided to you from Compute Software.   	|
+| discovery_role_arn        	| The IAM Role ARN for the Discovery Role.                 	|
