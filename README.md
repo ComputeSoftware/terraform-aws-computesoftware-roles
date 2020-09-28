@@ -25,3 +25,10 @@ module "computesoftware-roles" {
 | platform_role_name        | Platform IAM Role name.                                                                         |        | `"compute-software-platform-role"`         | no       |
 | trusted_role_arn          | ARN used for the IAM role sts:AssumeRole principal. Defaults to Compute Software's AWS account. |        | `"arn:aws:iam::734247230719:root"`         | no       |
 | read_only_policy_arn      | ARN for an AWS IAM policy that gives Compute Software read only access.                         |        | `"arn:aws:iam::aws:policy/ReadOnlyAccess"` | no       |
+
+## Outputs 
+
+| Name               | Description                                              |
+|--------------------|----------------------------------------------------------|
+| platform_role_arn  | The IAM Role ARN for the Compute Software Platform Role. |
+| discovery_role_arn | The IAM Role ARN for the Discovery Role.                 |
