@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
+## [1.0.3] - 2020-12-28
+### Added
+- Add `workspaces_write_access` var.
+- Add workspaces nested module
+
 ## [1.0.2] - 2020-09-28
 ### Added
 - Add `platform_role_external_id` output
