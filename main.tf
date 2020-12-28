@@ -7,7 +7,9 @@ data "aws_iam_policy_document" "policy" {
       "ce:List*",
       "ce:Describe*"
     ]
-    resources = ["*"]
+    resources = [
+      "*"
+    ]
   }
 }
 
@@ -41,7 +43,8 @@ data "aws_iam_policy_document" "platform_assume_role_policy" {
   statement {
     effect = "Allow"
     actions = [
-      "sts:AssumeRole"]
+      "sts:AssumeRole"
+    ]
     principals {
       identifiers = [
         var.trusted_role_arn
@@ -51,7 +54,8 @@ data "aws_iam_policy_document" "platform_assume_role_policy" {
     condition {
       test = "StringEquals"
       values = [
-        var.platform_role_external_id]
+        var.platform_role_external_id
+      ]
       variable = "sts:ExternalId"
     }
   }
@@ -81,4 +85,10 @@ resource "aws_iam_role_policy_attachment" "platform_read_only_attachment" {
 resource "aws_iam_role_policy_attachment" "platform_policy_attachment" {
   policy_arn = aws_iam_policy.compute_software_policy.arn
   role = aws_iam_role.platform_role.name
+}
+
+module "workspaces" {
+  count = var.workspaces_write_access ? 1 : 0
+  source = "./modules/workspaces"
+  role_name = aws_iam_role.platform_role.name
 }

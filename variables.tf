@@ -26,3 +26,9 @@ variable "read_only_policy_arn" {
   default = "arn:aws:iam::aws:policy/ReadOnlyAccess"
   description = "ARN for an AWS IAM policy that gives Compute Software read only access."
 }
+
+variable "workspaces_write_access" {
+  type = bool
+  default = false
+  description = "If true, enables AWS WorkSpaces write access."
+}

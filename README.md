@@ -18,13 +18,14 @@ module "computesoftware-roles" {
 
 ## Inputs
 
-| Name                      | Description                                                                                     | Type   | Default                                    | Required |
-|---------------------------|-------------------------------------------------------------------------------------------------|--------|--------------------------------------------|----------|
-| platform_role_external_id | The External ID provided to you from Compute Software.                                          | string |                                            | yes      |
-| discovery_role_name       | Discovery IAM Role name.                                                                        |        | `"compute-software-discovery-role"`        | no       |
-| platform_role_name        | Platform IAM Role name.                                                                         |        | `"compute-software-platform-role"`         | no       |
-| trusted_role_arn          | ARN used for the IAM role sts:AssumeRole principal. Defaults to Compute Software's AWS account. |        | `"arn:aws:iam::734247230719:root"`         | no       |
-| read_only_policy_arn      | ARN for an AWS IAM policy that gives Compute Software read only access.                         |        | `"arn:aws:iam::aws:policy/ReadOnlyAccess"` | no       |
+| Name                      	| Description                                                                                     	| Type   	| Default                                    	| Required 	|
+|---------------------------	|-------------------------------------------------------------------------------------------------	|--------	|--------------------------------------------	|----------	|
+| platform_role_external_id 	| The External ID provided to you from Compute Software.                                          	| string 	|                                            	| yes      	|
+| discovery_role_name       	| Discovery IAM Role name.                                                                        	| string 	| `"compute-software-discovery-role"`        	| no       	|
+| platform_role_name        	| Platform IAM Role name.                                                                         	| string 	| `"compute-software-platform-role"`         	| no       	|
+| trusted_role_arn          	| ARN used for the IAM role sts:AssumeRole principal. Defaults to Compute Software's AWS account. 	| string 	| `"arn:aws:iam::734247230719:root"`         	| no       	|
+| read_only_policy_arn      	| ARN for an AWS IAM policy that gives Compute Software read only access.                         	| string 	| `"arn:aws:iam::aws:policy/ReadOnlyAccess"` 	| no       	|
+| workspaces_write_access   	| If true, enables AWS WorkSpaces write access.                                                   	| bool   	| false                                      	| no       	|
 
 ## Outputs 
 
