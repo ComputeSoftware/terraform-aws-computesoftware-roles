@@ -88,7 +88,9 @@ resource "aws_iam_role_policy_attachment" "platform_policy_attachment" {
 }
 
 module "workspaces" {
-  count = var.workspaces_write_access ? 1 : 0
+  // Only supported on TF 0.13+
+  //  count = var.workspaces_write_access ? 1 : 0
   source = "./modules/workspaces"
+  enabled = var.workspaces_write_access
   role_name = aws_iam_role.platform_role.name
 }
