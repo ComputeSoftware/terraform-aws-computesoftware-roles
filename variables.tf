@@ -32,3 +32,9 @@ variable "workspaces_write_access" {
   default = false
   description = "If true, enables AWS WorkSpaces write access."
 }
+
+variable "dynamodb_automation" {
+  type = bool
+  default = false
+  description = "To include DynamoDB automation features, set this parameter to `true`."
+}

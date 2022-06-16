@@ -94,3 +94,9 @@ module "workspaces" {
   enabled = var.workspaces_write_access
   role_name = aws_iam_role.platform_role.name
 }
+
+module "dynamodb_automation" {
+  source = "./modules/dynamodb_automation"
+  enabled = var.dynamodb_automation
+  role_name = aws_iam_role.platform_role.name
+}
