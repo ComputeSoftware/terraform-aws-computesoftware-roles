@@ -3,6 +3,7 @@ data "aws_iam_policy_document" "dynamodb_write_access_policy_doc" {
   statement {
     effect = "Allow"
     actions = [
+      "application-autoscaling:DeleteScalingPolicy",
       "application-autoscaling:PutScalingPolicy",
       "application-autoscaling:RegisterScalableTarget",
       "dynamodb:UpdateTable"
